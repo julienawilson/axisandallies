@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>"Axis and Allies battle projector"</title>
+    <link href="aanda.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="title">
+      <h1 id="maintitle" >Axis And Allies Battle Projector</h1>
+    </div><!--- End Title --->
+
+    <div id="attacker">
+      <div id="inputs">
+        <form onsubmit="event.preventDefault(); getAttack()" id="formA">
+            <label> Infantry: <input type="text" name="infantryA" id='infantryA'  /></label>
+            <br/>
+            <label> Artillery: <input type="text" name="artilleryA" id='artilleryA'/></label>
+            <br/>
+            <label> Tank: <input type="text" name="tankA" id='tankA' /></label>
+            <br/>
+            <label> Fighter: <input type="text" name="fighterA" id='fighterA' /></label>
+            <br/>
+            <label> Bomber: <input type="text" name="bomberA" id='bomberA' /></label>
+            <br/>
+            <label> Transport: <input type="text" name="transportA" id='transportA' /></label>
+            <br/>
+            <label> Submarine: <input type="text" name="submarineA" id='submarineA' /></label>
+            <br/>
+            <label> Destroyer: <input type="text" name="destroyerA" id='destroyerA' /></label>
+            <br/>
+            <label> Battleship: <input type="text" name="battleshipA" id='battleshipA' /></label>
+            <br/>
+            <label> Aircraft Carrier: <input type="text" name="aircraftcarrierA" id='aircraftcarrierA' /></label>
+            <br/>
+            <input type="submit" name="submitA" value="Submit"/>
+        </form>
+      </div><!--- End inputs --->
+
+      <div id="chart">
+        <h2>Bar Chart</h2>
+
+      </div><!--- End Bar Chart --->
+
+      <div id="results">
+        <table>
+          <thead>
+            <tr>
+              <th><u>Kills</u></th>
+              <th><u>Chance</u></th>
+            </tr>
+          </thead>
+          <tbody id="tabBodA">
+
+        </tbody>
+        </table>
+      </div><!--- End Results --->
+
+    </div> <!--- End attackers --->
+
+
+    <div id="defender">
+      <div id="inputs">
+        <form onsubmit="event.preventDefault(); getDefense()" id="formD">
+            <label> Infantry: <input type="text" name="infantry" id='infantryD'  /></label>
+            <br/>
+            <label> Artillery: <input type="text" name="artillery" id='artilleryD'/></label>
+            <br/>
+            <label> Tank: <input type="text" name="tank" id='tankD' /></label>
+            <br/>
+            <label> Fighter: <input type="text" name="fighter" id='fighterD' /></label>
+            <br/>
+            <label> Bomber: <input type="text" name="bomber" id='bomberD' /></label>
+            <br/>
+            <label> Transport: <input type="text" name="transport" id='transportD' /></label>
+            <br/>
+            <label> Submarine: <input type="text" name="submarine" id='submarineD' /></label>
+            <br/>
+            <label> Destroyer: <input type="text" name="destroyer" id='destroyerD' /></label>
+            <br/>
+            <label> Battleship: <input type="text" name="battleship" id='battleshipD' /></label>
+            <br/>
+            <label> Aircraft Carrier: <input type="text" name="aircraftcarrier" id='aircraftcarrierD' /></label>
+            <br/>
+            <input type="submit" name="submitD" value="Submit"/>
+        </form>
+
+      <p id="testNumber"></p>
+      </div><!--- End inputs --->
+
+      <div id="chart">
+        <h2>Bar Chart</h2>
+
+      </div><!--- End Bar Chart --->
+
+      <div id="results">
+        <table>
+          <thead>
+            <tr>
+              <th><u>Kills</u></th>
+              <th><u>Chance</u></th>
+            </tr>
+          </thead>
+          <tbody id="tabBodD">
+
+        </tbody>
+        </table>
+      </div><!--- End Results --->
+
+    </div> <!--- End defenders --->
+
+
+
+
+
+
+        <script src="aanda.js"></script>
+  </body>
+
+
+
+</html>
