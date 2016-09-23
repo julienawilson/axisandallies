@@ -1,0 +1,65 @@
+body {
+  width: 90%;
+  max-width: 1000px;
+  min-width: 700px;
+  margin: 0 auto;
+  overflow: auto;}
+
+#title, #inputs, #chart, #results{
+  margin:0px;
+
+    text-align: center;
+  }
+
+#maintitle{
+  padding: 10px;
+
+}
+
+#title{
+  width: 99%;
+  height: 100px;
+  color: navy;
+  background-color: #f0f0f5;
+  margin:.5%;
+}
+
+#attacker, #defender {
+  width:49%;
+  margin:.5%;
+  float: left;
+}
+
+#inputs {
+  float:left;
+  background-color: #ffe6e6;
+  width: 35%;
+  height:1000px;
+  color: red;
+
+}
+
+#chart {
+  float: left;
+  width: 65%;
+  height:460px;
+  background-color: #e6eeff;}
+
+
+
+
+#results {
+  float: left;
+  width: 65%;
+  height: 540px;
+  color: red;
+  background-color: #ecf9ec;
+  overflow: auto;}
+
+input[type=text]{
+  width: 30px;
+}
+
+#formA, #formD {
+  text-align: right;
+}
