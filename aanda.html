@@ -1,16 +1,19 @@
 <html>
   <head>
     <title>"Axis and Allies battle projector"</title>
-    <link href="aanda.css" type="text/css" rel="stylesheet" />
+    <link href="aanda.css" type="text/css" rel="stylesheet" /> 
   </head>
 
-  <body>
-    <div id="title">
-      <h1 id="maintitle" >Axis And Allies Battle Projector</h1>
+  <body id='body' class='wideBody'>
+    <div id="title" >
+      <h1 id="mainTitle" class='wideTitle' >Axis And Allies Battle Projector</h1>
     </div><!--- End Title --->
 
-    <div id="attacker">
-      <div id="inputs">
+    <div id="attacker" class='wideFeature'>
+      <div id='titleA'>
+        <h3>Attacker</h3>
+      </div>
+      <div id="inputsA">
         <form onsubmit="event.preventDefault(); getAttack()" id="formA">
             <label> Infantry: <input type="text" name="infantryA" id='infantryA'  /></label>
             <br/>
@@ -36,13 +39,8 @@
         </form>
       </div><!--- End inputs --->
 
-      <div id="chart">
-        <h2>Bar Chart</h2>
-
-      </div><!--- End Bar Chart --->
-
-      <div id="results">
-        <table>
+      <div id="resultsA">
+        <table id='tabA'>
           <thead>
             <tr>
               <th><u>Kills</u></th>
@@ -58,8 +56,12 @@
     </div> <!--- End attackers --->
 
 
-    <div id="defender">
-      <div id="inputs">
+    <div id="defender" class='wideFeature'>
+      <div id='titleD'>
+        <h3>Defender</h3>
+      </div>
+      <div id="inputsD">
+
         <form onsubmit="event.preventDefault(); getDefense()" id="formD">
             <label> Infantry: <input type="text" name="infantry" id='infantryD'  /></label>
             <br/>
@@ -84,16 +86,11 @@
             <input type="submit" name="submitD" value="Submit"/>
         </form>
 
-      <p id="testNumber"></p>
       </div><!--- End inputs --->
 
-      <div id="chart">
-        <h2>Bar Chart</h2>
 
-      </div><!--- End Bar Chart --->
-
-      <div id="results">
-        <table>
+      <div id="resultsD">
+        <table id='tabD'>
           <thead>
             <tr>
               <th><u>Kills</u></th>
@@ -108,14 +105,19 @@
 
     </div> <!--- End defenders --->
 
-
-
-
-
+    <div id='description' class="description">
+     <div id='titleDescription'>
+        <h3>About</h3>
+      </div>
+      <div id='aboutText' class="wideAbout">
+        <p> This app is for calculating "kill" (or "hit") probabilities for the first round of battle
+            in the Axis and Allies Board Game (Revised Edition).  Enter the number of attacking and/or defending
+            units.  The probablities given are for the number of "kills" those units will successfully make.
+        </p>
+      </div>
+    </div>
 
         <script src="aanda.js"></script>
   </body>
-
-
 
 </html>
