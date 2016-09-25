@@ -1,8 +1,4 @@
 
-//unitArray
-//var allUnits =['infantry','artillery','tank','fighter','bomber','transport','destroyer','battleship','aircraftcarrier'];
-
-
 //Variables from inputs
 var nUnits = 0;
 var chances = [];
@@ -25,7 +21,7 @@ var transport = new Unit ('Transport',0,1,0);
 var submarine = new Unit ('Submarine',2,2,0);
 var destroyer = new Unit ('Destroyer',3,3,0);
 var battleship = new Unit ('Battleship',4,4,0);
-var aircraftcarrier = new Unit ('Aircraft Carrier',2,3,0);
+var aircraftcarrier = new Unit ('Aircraft Carrier',1,3,0);
 
 //setting DOM elements
   //Attack DOM Elements
@@ -57,8 +53,6 @@ var aircraftcarrier = new Unit ('Aircraft Carrier',2,3,0);
   var elBatD = document.getElementById('battleshipD');
   var elACD = document.getElementById('aircraftcarrierD');
 
-  //test DOM elements
-  var elNumb = document.getElementById('testNumber');
 
 //Attack Functions
   if(sessionStorage.chancesA){
@@ -198,8 +192,6 @@ var aircraftcarrier = new Unit ('Aircraft Carrier',2,3,0);
           newTd2.appendChild(newText2);
           elTableA.appendChild(newTr);
           };
-
-    elNumb.textContent = sessionStorage.infantryA;
     };
 
 
@@ -222,8 +214,6 @@ var aircraftcarrier = new Unit ('Aircraft Carrier',2,3,0);
 
      buildAttTable();
    };
-
-
 
 
 //Defense Functions
@@ -364,8 +354,6 @@ var aircraftcarrier = new Unit ('Aircraft Carrier',2,3,0);
           newTd2.appendChild(newText2);
           elTableD.appendChild(newTr);
           };
-
-    elNumb.textContent = sessionStorage.infantryD;
     };
 
 
@@ -388,3 +376,36 @@ var aircraftcarrier = new Unit ('Aircraft Carrier',2,3,0);
 
      buildDefTable();
    };
+
+
+  //changing viewer size
+
+  var elBody = document.getElementById('body');
+  var elTitle = document.getElementById('mainTitle');
+  var elAttacker = document.getElementById('attacker');
+  var elDefender = document.getElementById('defender');
+  var elDescription = document.getElementById('description');
+  var elAbout = document.getElementById('aboutText');
+
+  function screenSize() {
+    var width = window.innerWidth;
+    if(width<1400){
+      elBody.className = 'smallBody';
+      elTitle.className = 'smallTitle';
+      elAttacker.className = 'smallFeature';
+      elDefender.className = 'smallFeature';
+      elDescription.className = 'smallDescription';
+      elAbout.className = 'smallAbout';
+    }else{
+      elBody.className = 'wideBody';
+      elTitle.className = 'wideTitle';
+      elAttacker.className = 'wideFeature';
+      elDefender.className = 'wideFeature';
+      elDescription.className = 'wideDescription';
+      elAbout.className = 'wideAbout';
+    };
+  };
+
+
+  window.addEventListener('load', screenSize, false);
+  window.addEventListener('resize', screenSize, false);
